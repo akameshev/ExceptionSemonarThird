@@ -25,11 +25,11 @@ public class UserInput2File {
         String gender = data[5];
 
         if (!dateOfBirth.matches("\\d{2}.\\d{2}.\\d{4}"))
-            throw new InvalidDataException("Вы ввели дату с ошибкой");
+            throw new InvalidDataException("Вы ввели дату с ошибкой, введите данные в формате dd.mm.yyyy");
         if (!phoneNumber.matches("\\d+"))
-            throw new InvalidDataException("Вы ввели неверный номер телефона");
+            throw new InvalidDataException("Вы ввели неверный номер телефона, нужно целое число без знаков");
         if (!gender.matches("[fm]"))
-            throw new InvalidDataException("Вы неверно указали пол");
+            throw new InvalidDataException("Вы неверно указали пол, допускается только f и m");
 
     }
 
