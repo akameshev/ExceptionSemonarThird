@@ -16,7 +16,8 @@ public class UserInput2File {
     }
 
     private static void validData(String[] data) throws InvalidDataException {
-        if (data.length != 6)throw new InvalidDataException("Не все данные введены");
+        if (data.length != 6)throw new InvalidDataException("Не все данные введены, " +
+                "либо добавлено лишнее, предпологалось 6 аргументов");
         String name = data[0];
         String secondName = data[1];
         String thirdName = data[2];
