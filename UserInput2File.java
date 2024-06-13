@@ -40,6 +40,8 @@ public class UserInput2File {
         try(FileWriter writer = new FileWriter(fileName,true)){
             writer.write(String.join(" ", Arrays.toString(data) + "\n"));
             writer.flush();
+        }catch (IOException e){
+            e.printStackTrace();
         }
     }
 
